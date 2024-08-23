@@ -1,0 +1,82 @@
+/* src/CommentsPage.css */
+
+.comments-page-container {
+    max-width: 800px; /* Define uma largura máxima para a página de comentários */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px; /* Arredonda os cantos do contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao contêiner */
+}
+
+.comments-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6f42c1; /* Roxo para o cabeçalho */
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.comments-page-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.comments-page-header button {
+    background-color: #e0e0e0; /* Cor de fundo para o botão de fechar */
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.comments-page-header button:hover {
+    background-color: #c0c0c0; /* Tom mais escuro para o botão de fechar ao passar o mouse */
+}
+
+.comments-list {
+    margin-bottom: 1rem;
+}
+
+.comment {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    max-width: 100%; /* Garante que o comentário não ultrapasse a largura do contêiner pai */
+    word-wrap: break-word; /* Quebra as palavras longas para evitar overflow */
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.comment-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.comment-input button {
+    background-color: #6f42c1; /* Roxo */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.comment-input button:hover {
+    background-color: #5a2a91; /* Tom mais escuro de roxo */
+}
