@@ -1,0 +1,149 @@
+/* src/Complaints.css */
+
+.complaints-container {
+    max-width: 600px; /* Definindo uma largura máxima para o container */
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .title-card {
+    background-color: #6f42c1; /* Roxo para o cabeçalho */
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .title-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .complaints-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .complaint-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .complaint-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .complaint-card h3 {
+    margin-top: 0.5rem;
+    color: #333;
+  }
+  
+  .complaint-card p {
+    color: #666;
+  }
+  
+  .complaint-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .complaint-actions button {
+    background-color: #6f42c1; /* Roxo */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .complaint-actions button:hover {
+    background-color: #5a2a91; /* Tom mais escuro de roxo */
+  }
+  
+  .comments-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comment {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+  
+  .complaint-status {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .status.em-aberto {
+    background-color: #e74c3c; /* Vermelho para "Em aberto" */
+  }
+  
+  .status.em-analise {
+    background-color: #8e44ad; /* Roxo para "Em análise Técnica" */
+  }
+  
+  .status.solucionada {
+    background-color: #2ecc71; /* Verde para "Solucionada" */
+  }
+  
+  /* Adicionando estilo para o botão de mostrar/ocultar descrição */
+  .complaint-card button.toggle-description {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .complaint-card button.toggle-description:hover {
+    background-color: #ccc;
+  }
+/* Ajusta o espaçamento do botão de mostrar/ocultar descrição */
+.toggle-description {
+    display: block;
+    margin-top: 1rem; /* Espaço acima do botão de descrição */
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .toggle-description:hover {
+    background-color: #ccc;
+  }
+  
+  /* Garantindo que a descrição apareça com um bom espaçamento */
+  .complaint-card p {
+    margin-top: 0.5rem; /* Espaço acima da descrição */
+  }
