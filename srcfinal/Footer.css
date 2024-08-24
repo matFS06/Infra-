@@ -1,0 +1,33 @@
+/* src/Footer.css */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-icon {
+    flex: 0;
+  }
+  
+  .footer-icon svg {
+    color: #6f42c1; /* Cor dos ícones */
+    cursor: pointer;
+  }
+  
+  .footer-icon svg:hover {
+    color: #5a2a91; /* Cor dos ícones ao passar o mouse */
+  }
+  
