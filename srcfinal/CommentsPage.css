@@ -1,42 +1,18 @@
 /* src/CommentsPage.css */
 
 .comments-page-container {
-    max-width: 800px; /* Define uma largura máxima para a página de comentários */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
     padding: 1rem;
     background-color: #fff;
-    border-radius: 8px; /* Arredonda os cantos do contêiner */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao contêiner */
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .comments-page-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6f42c1; /* Roxo para o cabeçalho */
-    color: #fff;
-    border-radius: 8px;
-    padding: 1rem;
+    justify-content: flex-end; /* Alinha o botão de fechar à direita */
     margin-bottom: 1rem;
-}
-
-.comments-page-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.comments-page-header button {
-    background-color: #e0e0e0; /* Cor de fundo para o botão de fechar */
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.comments-page-header button:hover {
-    background-color: #c0c0c0; /* Tom mais escuro para o botão de fechar ao passar o mouse */
 }
 
 .comments-list {
@@ -44,16 +20,65 @@
 }
 
 .comment {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-    max-width: 100%; /* Garante que o comentário não ultrapasse a largura do contêiner pai */
-    word-wrap: break-word; /* Quebra as palavras longas para evitar overflow */
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.comment p {
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.comment-user {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-text {
     margin: 0;
+    color: #555;
+    text-align: left; /* Justifica o texto à esquerda */
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+    text-align: left; /* Justifica a data à esquerda */
+}
+
+.comment-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões de ação à direita */
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #e74c3c; /* Cor vermelha para o coração */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.like-button:hover {
+    color: #c0392b; /* Cor vermelha mais escura ao passar o mouse */
 }
 
 .comment-input {
@@ -69,7 +94,7 @@
 }
 
 .comment-input button {
-    background-color: #6f42c1; /* Roxo */
+    background-color: #6f42c1;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -78,5 +103,5 @@
 }
 
 .comment-input button:hover {
-    background-color: #5a2a91; /* Tom mais escuro de roxo */
+    background-color: #5a2a91;
 }

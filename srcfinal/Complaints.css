@@ -59,6 +59,7 @@
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center; /* Centraliza o texto dentro do card */
+    position: relative; /* Para posicionar os ícones corretamente */
 }
 
 .complaint-card img {
@@ -80,22 +81,62 @@
 
 .complaint-actions {
     display: flex;
-    justify-content: center; /* Centraliza os botões de ação */
-    gap: 1rem;
+    justify-content: space-between; /* Espaça os ícones nas extremidades do card */
     margin-top: 1rem;
 }
 
-.complaint-actions button {
-    background-color: #6f42c1; /* Roxo */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+.left-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre os ícones na esquerda */
 }
 
-.complaint-actions button:hover {
-    background-color: #5a2a91; /* Tom mais escuro de roxo */
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre os ícones na direita */
+}
+
+.complaint-actions button,
+.complaint-actions .comment-icon {
+    background-color: transparent; /* Remove o fundo */
+    color: #555; /* Cor dos ícones */
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Remove o padding */
+    font-size: 1.5rem; /* Tamanho dos ícones */
+}
+
+.complaint-actions button:hover,
+.complaint-actions .comment-icon:hover {
+    color: #333; /* Cor mais escura ao passar o mouse */
+}
+
+.arrow-up-button {
+    color: #555; /* Cor do ícone de seta para cima */
+    margin-left: 15px;
+}
+
+.comment-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #555; /* Cor do ícone de balão de comentário */
+    font-size: 1.2rem; /* Tamanho do ícone de balão de comentário */
+}
+
+.comment-icon span {
+    margin-left: 0.5rem;
+    font-size: 1rem; /* Tamanho da fonte do número de comentários */
+}
+
+.share-button {
+    color: #555; /* Cor do ícone de compartilhar */
+    margin-left: 110px;
+}
+
+.save-button {
+    color: #555; /* Cor do ícone de salvar */
 }
 
 .comments-section {

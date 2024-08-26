@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import './Complaints.css';
 import CommentsPage from './CommentsPage';
-import { FaSearch } from 'react-icons/fa'; // Importando ícone de lupa
+import { FaSearch, FaComment, FaShare, FaBookmark, FaArrowUp } from 'react-icons/fa'; // Atualizar para ícones necessários
 
 interface Complaint {
   id: number;
@@ -11,7 +11,7 @@ interface Complaint {
   description: string;
   image: string;
   likes: number;
-  comments: Array<{ text: string }>;
+  comments: Array<{ text: string; date: string; likes: number }>;
   status: string;
 }
 
@@ -105,11 +105,33 @@ function Complaints() {
               <p>{complaint.description}</p>
             )}
             <div className="complaint-actions">
-              <button onClick={() => handleLike(complaint.id)}>👍 {complaint.likes}</button>
-              <button onClick={() => handleOpenComments(complaint)}>Comentar</button>
+              <button className="arrow-up-button">
+                <FaArrowUp /> {/* Ícone de seta para cima */}
+              </button>
+              <div className="comment-icon" onClick={() => handleOpenComments(complaint)}>
+                <FaComment />
+                <span>{complaint.comments.length}</span> {/* Exibe o número de comentários */}
+              </div>
+              <a href="https://www.instagram.com/sharer/sharer.php?u=https://your-website-url.com" className="share-button" target="_blank" rel="noopener noreferrer">
+                <FaShare /> {/* Ícone de compartilhar */}
+              </a>
+              <button className="save-button">
+                <FaBookmark /> {/* Ícone de salvar (marcador) */}
+              </button>
             </div>
             {selectedComplaint && selectedComplaint.id === complaint.id && (
-              <CommentsPage complaint={selectedComplaint} onClose={handleCloseComments} />
+              <CommentsPage
+                complaint={selectedComplaint}
+                onClose={handleCloseComments}
+                userName="Novo Usuário" // Nome fictício
+                onCommentAdded={(newComment) => {
+                  setComplaints(complaints.map((c) =>
+                    c.id === selectedComplaint.id
+                      ? { ...c, comments: [...c.comments, newComment] }
+                      : c
+                  ));
+                }}
+              />
             )}
           </div>
         ))}
