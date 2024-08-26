@@ -22,7 +22,7 @@
     font-size: 1.5rem;
 }
 
-.search-bar {
+/*.search-bar {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -30,7 +30,26 @@
     border-radius: 4px;
     padding: 0.5rem;
     background-color: #fff;
+}*/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Bordas circulares */
+    padding: 0.5rem;
+    background-color: #fff;
+    position: relative; /* Para posicionar a lupa fora da barra */
 }
+
+/*.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+}*/
 
 .search-bar input {
     border: none;
@@ -38,12 +57,23 @@
     flex: 1;
     padding: 0.5rem;
     font-size: 1rem;
+    border-radius: 50px; /* Para combinar com a barra */
 }
+
+
+/*.search-icon {
+    color: #6f42c1; /* Cor roxa para o ícone de pesquisa 
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}*/
 
 .search-icon {
     color: #6f42c1; /* Cor roxa para o ícone de pesquisa */
     font-size: 1.2rem;
-    margin-left: 0.5rem;
+    position: absolute; /* Posiciona a lupa fora da barra */
+    right: 10px; /* Ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .complaints-list {
@@ -98,13 +128,13 @@
 }
 
 .complaint-actions button,
-.complaint-actions .comment-icon {
+.complaint-actions .comment-icon span {
     background-color: transparent; /* Remove o fundo */
     color: #555; /* Cor dos ícones */
     border: none;
     cursor: pointer;
     padding: 0; /* Remove o padding */
-    font-size: 1.5rem; /* Tamanho dos ícones */
+    font-size: 1.2rem; /* Tamanho dos ícones */
 }
 
 .complaint-actions button:hover,
@@ -174,8 +204,8 @@
     background-color: #e74c3c; /* Vermelho para "Em aberto" */
 }
 
-.status.em-analise {
-    background-color: #8e44ad; /* Roxo para "Em análise Técnica" */
+.status.em-análise-técnica {
+    background-color: #2624a5; /* Roxo para "Em análise Técnica" */
 }
 
 .status.solucionada {
@@ -195,4 +225,67 @@
 
 .toggle-description:hover {
     background-color: #ccc;
+}
+
+/* Adiciona estilo para a seção de perfil dentro do cartão de reclamação */
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para a foto de perfil (círculo) */
+.profile-pic {
+    width: 40px; /* Tamanho do círculo */
+    height: 40px;
+    border-radius: 50%; /* Faz o círculo */
+    background-color: #ddd; /* Cor de fundo da foto de perfil */
+    margin-right: 0.5rem; /* Espaço entre a foto e o nome */
+    background-image: url('https://via.placeholder.com/40'); /* Adicione a URL da foto de perfil aqui */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para as informações do perfil (nome e função) */
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    position: relative; /* Para posicionar a data no canto superior direito */
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd; /* Cor de fundo placeholder para a foto do perfil */
+    margin-right: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 11px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.profile-role {
+    color: #666;
+}
+
+.profile-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*background-color: #fff;*/
+    color: #666;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

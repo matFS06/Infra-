@@ -1,9 +1,7 @@
-// src/Complaints.tsx
-
 import React, { useState } from 'react';
 import './Complaints.css';
-import CommentsPage from './CommentsPage';
-import { FaSearch, FaComment, FaShare, FaBookmark, FaArrowUp } from 'react-icons/fa'; // Atualizar para ícones necessários
+import CommentsPage from './CommentsPage.tsx';
+import { FaSearch, FaComment, FaShare, FaBookmark, FaArrowUp } from 'react-icons/fa';
 
 interface Complaint {
   id: number;
@@ -13,6 +11,7 @@ interface Complaint {
   likes: number;
   comments: Array<{ text: string; date: string; likes: number }>;
   status: string;
+  date: string; // Adicione a data ao tipo de Complaint
 }
 
 function Complaints() {
@@ -24,7 +23,8 @@ function Complaints() {
       image: 'https://via.placeholder.com/150?text=Papel+Toalha',
       likes: 0,
       comments: [],
-      status: 'Em análise'
+      status: 'Em análise Técnica',
+      date: '25 de Agosto de 2024' // Data exemplo
     },
     {
       id: 2,
@@ -33,7 +33,8 @@ function Complaints() {
       image: 'https://via.placeholder.com/150?text=Teto+Quebrado',
       likes: 0,
       comments: [],
-      status: 'Em aberto'
+      status: 'Em aberto',
+      date: '24 de Agosto de 2024' // Data exemplo
     },
     {
       id: 3,
@@ -42,7 +43,8 @@ function Complaints() {
       image: 'https://via.placeholder.com/150?text=RESUN+Calor',
       likes: 0,
       comments: [],
-      status: 'Solucionada'
+      status: 'Solucionada',
+      date: '23 de Agosto de 2024' // Data exemplo
     }
   ];
 
@@ -50,11 +52,19 @@ function Complaints() {
   const [selectedComplaint, setSelectedComplaint] = useState<Complaint | null>(null);
   const [expandedComplaint, setExpandedComplaint] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [arrowUpCounts, setArrowUpCounts] = useState<{ [key: number]: number }>({});
 
   const handleLike = (id: number) => {
     setComplaints(complaints.map((complaint) =>
       complaint.id === id ? { ...complaint, likes: complaint.likes + 1 } : complaint
     ));
+  };
+
+  const handleArrowUpClick = (id: number) => {
+    setArrowUpCounts({
+      ...arrowUpCounts,
+      [id]: (arrowUpCounts[id] || 0) + 1,
+    });
   };
 
   const handleOpenComments = (complaint: Complaint) => {
@@ -82,7 +92,7 @@ function Complaints() {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Pesquisar reclamações..."
+          placeholder="Pesquise um problema"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -91,6 +101,14 @@ function Complaints() {
       <div className="complaints-list">
         {filteredComplaints.map((complaint) => (
           <div key={complaint.id} className="complaint-card">
+            <div className="profile-info">
+              <div className="profile-pic"></div> {/* Placeholder para a foto de perfil */}
+              <div className="profile-details">
+                <div className="profile-name">Nome do Usuário</div>
+                <div className="profile-role">Cargo</div>
+              </div>
+              <div className="profile-date">{complaint.date}</div> {/* Data da reclamação */}
+            </div>
             <img src={complaint.image} alt={complaint.title} />
             <h3>{complaint.title}</h3>
             <div className="complaint-status">
@@ -105,8 +123,9 @@ function Complaints() {
               <p>{complaint.description}</p>
             )}
             <div className="complaint-actions">
-              <button className="arrow-up-button">
+              <button className="arrow-up-button" onClick={() => handleArrowUpClick(complaint.id)}>
                 <FaArrowUp /> {/* Ícone de seta para cima */}
+                <span>{arrowUpCounts[complaint.id] || 0}</span> {/* Contador de cliques */}
               </button>
               <div className="comment-icon" onClick={() => handleOpenComments(complaint)}>
                 <FaComment />

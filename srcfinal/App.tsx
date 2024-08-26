@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
-import Login from './Login';
-import Header from './Header';
-import Complaints from './Complaints';
-import CommentsPage from './CommentsPage';
-import Footer from './Footer';
+import Login from './Login.tsx';
+import Header from './Header.tsx';
+import Complaints from './Complaints.tsx';
+import CommentsPage from './CommentsPage.tsx';
+import Footer from './Footer.tsx';
 import './App.css';
 
 const CommentsPageWrapper = () => {
