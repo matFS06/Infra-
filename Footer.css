@@ -1,0 +1,79 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*width: 49px; /* Ajuste o tamanho conforme necessário 
+  height: 49px; /* Ajuste o tamanho conforme necessário 
+  border-radius: 50%; /* Deixa o fundo dos ícones arredondado 
+  cursor: pointer;*/
+}
+
+.footer-icon svg {
+  width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+/* Estilo específico para o ícone User */
+/*.footer-icon.user {
+  background: rgba(255, 255, 255, 1); /* Fundo branco 
+}*/
+
+.footer-icon.user svg {
+  color: rgba(34, 19, 236, 1); /* Cor azul */
+  width: 15.99px;
+  height: 20px;
+  top: 2px;
+  left: 4px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+/* Estilo específico para o ícone Plus */
+.footer-icon.plus {
+  background: rgba(34, 19, 236, 1); /* Fundo azul */
+  width: 29px;
+  height: 49px;
+  top: 11px;
+  left: 171px;
+  gap: 0px;
+  border-radius: 81px 81px 81px 81px;
+  opacity: 0px;
+}
+
+.footer-icon.plus svg {
+  color: rgba(255, 255, 255, 1); /* Cor branca */
+}
+
+/* Estilo específico para o ícone Cog */
+/*.footer-icon.cog {
+  background: rgba(255, 255, 255, 1); /* Fundo branco 
+}*/
+
+.footer-icon.cog svg {
+  color: rgba(34, 19, 236, 1); /* Cor azul */
+  width: 25px;
+  height: 30px;
+  top: 25px;
+  left: 348px;
+  gap: 0px;
+  border: 2px 0px 0px 0px;
+  opacity: 0.7px;
+}
+
+/* Cor dos ícones ao passar o mouse */
+/*.footer-icon:hover svg {
+  color: #5a2a91;
+}*/

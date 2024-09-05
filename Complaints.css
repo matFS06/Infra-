@@ -1,149 +1,339 @@
 /* src/Complaints.css */
 
 .complaints-container {
-    max-width: 600px; /* Definindo uma largura máxima para o container */
+    max-width: 600px; /* Define uma largura máxima para o contêiner */
     margin: 0 auto;
     padding: 1rem;
     background-color: #fff;
-  }
-  
-  .title-card {
+}
+
+.title-card {
     background-color: #6f42c1; /* Roxo para o cabeçalho */
     color: #fff;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .title-card h2 {
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+}
+
+.title-card h2 {
     margin: 0;
     font-size: 1.5rem;
-  }
-  
-  .complaints-list {
+}
+
+/*.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #fff;
+}*/
+
+.search-bar-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a barra de pesquisa e a lupa */
+}
+
+.search-bar {
+    /*display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Bordas circulares 
+    padding: 0.5rem;
+    background-color: #fff;
+    position: relative; /* Para posicionar a lupa fora da barra*/
+    width: 288px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(226, 227, 228, 1);
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 0; /* Remove o padding para ajustar o campo ao tamanho exato */
+}
+
+/*.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+}*/
+
+.search-bar input {
+    /*border: none;
+    outline: none;
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 50px; /* Para combinar com a barra */
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+    background: transparent;
+}
+
+
+/*.search-icon {
+    color: #6f42c1; /* Cor roxa para o ícone de pesquisa 
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}*/
+
+.search-icon {
+    /*color: #6f42c1; /* Cor roxa para o ícone de pesquisa 
+    font-size: 1.2rem;
+    position: absolute; /* Posiciona a lupa fora da barra 
+    right: 10px; /* Ajuste conforme necessário 
+    top: 50%;
+    transform: translateY(-50%);*/
+    width: 28.5px;
+    height: 28.5px;
+    /*border: 1.5px solid rgba(51, 53, 51, 1);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajuste conforme necessário para o alinhamento vertical */
+}
+
+.complaints-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  
-  .complaint-card {
+}
+
+.complaint-card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .complaint-card img {
+    text-align: center; /* Centraliza o texto dentro do card */
+    position: relative; /* Para posicionar os ícones corretamente */
+}
+
+.complaint-card img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-  }
-  
-  .complaint-card h3 {
-    margin-top: 0.5rem;
+}
+
+.complaint-card h3 {
+    margin: 0.5rem 0;
     color: #333;
-  }
-  
-  .complaint-card p {
+    font-size: 1.25rem; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.complaint-card p {
     color: #666;
-  }
-  
-  .complaint-actions {
+    margin-top: 0.5rem; /* Espaço acima da descrição */
+}
+
+.complaint-actions {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between; /* Espaça os ícones nas extremidades do card */
     margin-top: 1rem;
-  }
-  
-  .complaint-actions button {
-    background-color: #6f42c1; /* Roxo */
-    color: #fff;
+}
+
+.left-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre os ícones na esquerda */
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre os ícones na direita */
+}
+
+.complaint-actions button,
+.complaint-actions .comment-icon span {
+    background-color: transparent; /* Remove o fundo */
+    color: #555; /* Cor dos ícones */
     border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
     cursor: pointer;
-  }
-  
-  .complaint-actions button:hover {
-    background-color: #5a2a91; /* Tom mais escuro de roxo */
-  }
-  
-  .comments-section {
+    padding: 0; /* Remove o padding */
+    font-size: 1.2rem; /* Tamanho dos ícones */
+}
+
+.complaint-actions button:hover,
+.complaint-actions .comment-icon:hover {
+    color: #333; /* Cor mais escura ao passar o mouse */
+}
+
+.arrow-up-button {
+    color: #555; /* Cor do ícone de seta para cima */
+    margin-left: 15px;
+}
+
+.comment-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #555; /* Cor do ícone de balão de comentário */
+    font-size: 1.2rem; /* Tamanho do ícone de balão de comentário */
+}
+
+.comment-icon span {
+    margin-left: 0.5rem;
+    font-size: 1rem; /* Tamanho da fonte do número de comentários */
+}
+
+.share-button {
+    color: #555; /* Cor do ícone de compartilhar */
+    margin-left: 110px;
+}
+
+.save-button {
+    color: #555; /* Cor do ícone de salvar */
+}
+
+.comments-section {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #ddd;
-  }
-  
-  .comment {
+}
+
+.comment {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     background-color: #f1f1f1;
     border-radius: 4px;
-  }
-  
-  .comment p {
+}
+
+.comment p {
     margin: 0;
-  }
-  
-  .complaint-status {
+}
+
+/*.complaint-status {
     margin-top: 1rem;
     display: flex;
+    justify-content: center; /* Centraliza o status 
+}*/
+.complaint-status {
+    width: 112.8px;
+    height: 26px;
+    padding: 16px 107px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-  }
-  
-  .status {
+    border-radius: 12px;
+    background: rgba(33, 19, 232, 1);
+    opacity: 1; /* Aparentemente, a opacidade 0 esconde o elemento, então usei 1 */
+}
+
+/*.status {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     color: #fff;
     font-weight: bold;
-  }
-  
-  .status.em-aberto {
-    background-color: #e74c3c; /* Vermelho para "Em aberto" */
-  }
-  
-  .status.em-analise {
-    background-color: #8e44ad; /* Roxo para "Em análise Técnica" */
-  }
-  
-  .status.solucionada {
-    background-color: #2ecc71; /* Verde para "Solucionada" */
-  }
-  
-  /* Adicionando estilo para o botão de mostrar/ocultar descrição */
-  .complaint-card button.toggle-description {
-    background-color: #ddd;
-    color: #333;
+}*/
+.status{
+    color: white; /* Ajuste a cor conforme necessário */
+    font-size: 16px;
+}
+
+/*.status.em-aberto {
+    background-color: #e74c3c; /* Vermelho para "Em aberto" 
+}
+
+.status.em-análise-técnica {
+    background-color: #2624a5; /* Roxo para "Em análise Técnica" 
+}
+
+.status.solucionada {
+    background-color: #2ecc71; /* Verde para "Solucionada" 
+}*/
+
+.description-toggle {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(104, 103, 119, 1); 
+    text-decoration: underline; /* Sublinhado */
     border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
     cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .complaint-card button.toggle-description:hover {
-    background-color: #ccc;
-  }
-/* Ajusta o espaçamento do botão de mostrar/ocultar descrição */
-.toggle-description {
-    display: block;
-    margin-top: 1rem; /* Espaço acima do botão de descrição */
-    background-color: #ddd;
-    color: #333;
-    border: none;
+    padding: 0.5rem 1rem; /* Adiciona algum espaçamento */
+    display: inline-block; /* Para aplicar o sublinhado corretamente */
+    margin-left: 0; /* Remove qualquer margem que possa centralizar o botão */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+/*.description-toggle:hover {
+    background: rgba(95, 94, 109, 1); /* Cor de fundo ao passar o mouse */
+    /*color: #a52a2a; /* Cor mais escura para o texto ao passar o mouse 
+}
+/* Adiciona estilo para a seção de perfil dentro do cartão de reclamação */
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para a foto de perfil (círculo) */
+.profile-pic {
+    width: 40px; /* Tamanho do círculo */
+    height: 40px;
+    border-radius: 50%; /* Faz o círculo */
+    background-color: #ddd; /* Cor de fundo da foto de perfil */
+    margin-right: 0.5rem; /* Espaço entre a foto e o nome */
+    background-image: url('https://via.placeholder.com/40'); /* Adicione a URL da foto de perfil aqui */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para as informações do perfil (nome e função) */
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    position: relative; /* Para posicionar a data no canto superior direito */
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd; /* Cor de fundo placeholder para a foto do perfil */
+    margin-right: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.profile-role {
+    color: #666;
+}
+
+.profile-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*background-color: #fff;*/
+    color: #666;
+    padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .toggle-description:hover {
-    background-color: #ccc;
-  }
-  
-  /* Garantindo que a descrição apareça com um bom espaçamento */
-  .complaint-card p {
-    margin-top: 0.5rem; /* Espaço acima da descrição */
-  }
+    font-size: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
