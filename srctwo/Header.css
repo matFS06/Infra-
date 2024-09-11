@@ -1,7 +1,7 @@
 /* src/Header.css */
 
 .header {
-    background-color: #6f42c1; /* Roxo para o cabeçalho */
+    background: rgba(33, 19, 232, 1); 
     color: #fff;
     padding: 1rem;
     text-align: center;

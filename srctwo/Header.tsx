@@ -11,10 +11,10 @@ import './Header.css'; // Se você tiver um CSS para o Header
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <h1>Infra+</h1>
+      <h1>ReclameAcao</h1>
       <nav>
         <ul>
-          <li><Link to="/">Login</Link></li>
+          <li><Link to="/">VOLTAR</Link></li>
           <li><Link to="/complaints">Reclamações</Link></li>
         </ul>
       </nav>

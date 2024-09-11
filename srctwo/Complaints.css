@@ -8,7 +8,7 @@
 }
 
 .title-card {
-    background-color: #6f42c1; /* Roxo para o cabeçalho */
+    background: rgba(33, 19, 232, 1); 
     color: #fff;
     border-radius: 8px;
     padding: 1rem;
@@ -271,6 +271,26 @@
     text-align: left; /* Garante que o texto fique alinhado à esquerda */
 }
 
+.description-section {
+    margin-top: 10px;
+}
+  
+.description-label {
+    color: gray;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 6px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Alinha à esquerda */
+}
+  
+.description-text {
+    margin-top: 0;
+}
+  
+
 /*.description-toggle:hover {
     background: rgba(95, 94, 109, 1); /* Cor de fundo ao passar o mouse */
     /*color: #a52a2a; /* Cor mais escura para o texto ao passar o mouse 
@@ -327,13 +347,22 @@
 }
 
 .profile-date {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     right: 0;
     /*background-color: #fff;*/
-    color: #666;
+    /*color: #666;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+
+    font-size: 14px;
+    font-family: Cambria;
+    /*background: rgba(104, 103, 119, 1);*/
+    padding: 4px; /* Ajuste se necessário */
+    border-radius: 3px; /* Adiciona um pouco de arredondamento se quiser */
+    color: rgba(104, 103, 119, 1); /* Ajuste a cor do texto se necessário */
+    display: inline-block;
+    margin-left: 20px;
 }

@@ -124,7 +124,10 @@ function Complaints() {
               {expandedComplaint === complaint.id ? 'Ocultar descrição' : 'Mostrar descrição'}
             </div>
             {expandedComplaint === complaint.id && (
-              <p className="description-text">{complaint.description}</p>
+              <div className="description-section">
+                <span className="description-label">DESCRIÇÃO</span>
+                <p className="description-text">{complaint.description}</p>
+              </div>
             )}
             <div className="complaint-actions">
               <button className="arrow-up-button" onClick={() => handleArrowUpClick(complaint.id)}>
