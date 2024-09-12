@@ -24,7 +24,7 @@ function Complaints() {
       likes: 0,
       comments: [],
       status: 'Em análise Técnica',
-      date: '25 de Agosto de 2024'
+      date: '25, Agosto, 2024'
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ function Complaints() {
       likes: 0,
       comments: [],
       status: 'Em aberto',
-      date: '24 de Agosto de 2024'
+      date: '24, Agosto, 2024'
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ function Complaints() {
       likes: 0,
       comments: [],
       status: 'Solucionada',
-      date: '23 de Agosto de 2024'
+      date: '23, Agosto, 2024'
     }
   ];
 

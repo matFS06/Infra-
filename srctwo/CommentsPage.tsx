@@ -1,7 +1,4 @@
-// src/CommentsPage.tsx
-
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import './CommentsPage.css';
 
 interface Comment {
@@ -60,9 +57,17 @@ function CommentsPage({ complaint, onClose }: CommentsPageProps) {
 
   return (
     <div className="comments-page-container">
+      {/* Cabeçalho que contém o contador de comentários, botão de ordenação e o botão de fechar */}
       <div className="comments-page-header">
-        <button onClick={onClose}>Fechar</button>
+        <div className="comments-count">
+          {comments.length} {comments.length === 1 ? 'COMENTÁRIO' : 'COMENTÁRIOS'}
+        </div>
+        <button className="most-liked-button">
+          MAIS CURTIDOS <span className="icon">v</span> {/* Seta para baixo */}
+        </button>
+        <button className="close-button" onClick={onClose}>X</button>
       </div>
+
       <div className="comments-list">
         {comments.map((comment, index) => (
           <div key={index} className="comment">

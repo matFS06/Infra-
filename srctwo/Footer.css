@@ -8,6 +8,7 @@
   bottom: 0;
   width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 0; /* Garante que o rodapé fique atrás do conteúdo principal */
 }
 
 .footer-icon {
@@ -44,7 +45,7 @@
 /* Estilo específico para o ícone Plus */
 .footer-icon.plus {
   background: rgba(34, 19, 236, 1); /* Fundo azul */
-  width: 29px;
+  width: 49px;
   height: 49px;
   top: 11px;
   left: 171px;
